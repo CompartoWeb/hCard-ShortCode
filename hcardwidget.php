@@ -48,10 +48,13 @@ function vcard_func( $atts ){
 	
 	$hcard = "";
 	$onlyies = explode(",",$only);
+	
+	if($onlyies[0] == "")
+		$onlyies = array();
 		
 	if($vcard != null){ 
 		/* == retrieve the vcard == */
-		$vposts = get_posts(array( 'post_name' => $vcard, 'post_type' => 'attachment', 'numberposts' => 1));
+		$vposts = get_posts(array( 'name' => trim($vcard), 'post_type' => 'attachment', 'numberposts' => 1, 'post_status' => 'any'));
 		
 		if(!empty($vposts)){
 			

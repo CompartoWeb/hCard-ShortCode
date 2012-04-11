@@ -147,12 +147,12 @@ class phpMicroformats {
 		}
 		
 		// EMAIL
-		$result .= '<span><a class="email" href="mailto:'.$data['email']['value'].'">'.($data['email']['type'] ? $data['email']['type'] : $data['email']['value']).'</a></span>'."\n";
+		$result .= '<a class="email" href="mailto:'.$data['email']['value'].'">'.($data['email']['type'] ? $data['email']['type'] : $data['email']['value']).'</a>'."\n";
 		
 		// URLS
 		if (isset($data['url'])) {
-			foreach($data['url'] as $url){
-				$result .= '<a class="url" href="'.$url['value'].'">'.($url['type'] ? $url['type'] : $url['value']).'</a>'."\n";
+			foreach($data['url'] as $index => $url){
+				$result .= '<a id="url_' . $index . '" class="url" href="'.$url['value'].'">'.($url['type'] ? $url['type'] : $url['value']).'</a>'."\n";
 			}
 		}
 		

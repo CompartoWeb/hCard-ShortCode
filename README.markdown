@@ -4,7 +4,7 @@ hCard ShortCode translates vCard to hCard and let's you display them using a sim
 ## How it works:
 1. install the plugin
 2. upload the vCards in the Media section
-3. choose a lowercase no-space Title for the vCards
+3. choose a **no-space only-alphanumeric lowercase** Title for the vCards
 4. use the [hcard vcard='vcard title' only='comma separated vcard fields to display'] shortcode 
 5. style the resulting hCard using CSS
 
@@ -49,7 +49,7 @@ keyword:
 ## An example:
 Here's a shortcode example:
 
-    [hcard vcard="sandro_paganotti" only="name,email,org:title,photo,url"]
+    [hcard vcard="sandropaganotti" only="name,email,org:title,photo,url"]
 
 ## Kudos and acknowledgements:
 This plugin uses the cool Contact_Vcard_Parse class from Paul M. Jones <pjones@ciaweb.net> and a modified version of the phpMicroformats class from Tobias Kluge (enarion.net). Thank you!
